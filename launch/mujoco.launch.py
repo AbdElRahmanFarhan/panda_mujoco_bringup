@@ -29,7 +29,6 @@ def generate_launch_description():
 
     controller_config_file = os.path.join(panda_moveit_config_path, 'config', 'ros2_controllers.yaml')
 
-    mujoco_models = os.path.join('/home', 'ros2_ws', 'src','mujoco_menagerie')
     panda_mujoco_model = os.path.join(panda_mujoco_path, 'mujoco_model', 'panda.xml')
 
     node_mujoco_ros2_control = Node(
