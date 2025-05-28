@@ -97,7 +97,7 @@ def generate_launch_description():
         "config",
         "ros2_controllers.yaml",
     )
-    panda_mujoco_model = os.path.join(panda_mujoco_path, 'mujoco_model', 'panda.xml')
+    panda_mujoco_model = os.path.join(panda_mujoco_path, 'mujoco_model', 'scene.xml')
     node_mujoco_ros2_control = Node(
         package='mujoco_ros2_control',
         executable='mujoco_ros2_control',
