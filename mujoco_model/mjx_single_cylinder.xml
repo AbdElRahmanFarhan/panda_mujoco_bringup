@@ -1,0 +1,11 @@
+<mujoco model="panda scene">
+  <include file="mjx_scene.xml"/>
+
+  <worldbody>
+    <body name="object" pos="0.8 0 0.1">
+      <freejoint/>
+      <geom type="cylinder" name="object_cylinder" size="0.02 0.1" condim="3"
+       friction="1 .03 .003" rgba="0 1 0 1" contype="2" conaffinity="1" solref="0.01 1"/>
+    </body>
+  </worldbody>
+</mujoco>

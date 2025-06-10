@@ -34,18 +34,20 @@ def generate_launch_description():
         )
         .robot_description_semantic(file_path="config/panda.srdf")
         .trajectory_execution(file_path="config/gripper_moveit_controllers.yaml")
+        .joint_limits("config/joint_limits.yaml")
+        .robot_description_kinematics("config/kinematics.yaml")
         .planning_pipelines(
             pipelines=["ompl", "chomp", "pilz_industrial_motion_planner"]
         )
         .to_moveit_configs()
     )
-
+    
     # Start the actual move_group node/action server
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[moveit_config.to_dict(), {'use_sim_time': True}],
+        parameters=[moveit_config.to_dict(), {'use_sim_time': True, "publish_robot_description_semantic": True,  "capabilities": "move_group/ExecuteTaskSolutionCapability"}],
         arguments=["--ros-args", "--log-level", "info"],
     )
 

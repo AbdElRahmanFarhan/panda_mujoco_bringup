@@ -25,4 +25,4 @@ endif()
 
 ament_package()
 
-install(DIRECTORY config launch mujoco_model DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY launch mujoco_model DESTINATION share/${PROJECT_NAME})

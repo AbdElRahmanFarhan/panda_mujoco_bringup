@@ -1,0 +1,10 @@
+<mujoco model="objects">
+    <worldbody>
+      <body name="cyl" pos="0.75 0 0.1">
+        <joint name="cyl_joint" type="free"></joint>
+        <geom type="cylinder" size="0.02 0.1" friction="1 0.005 0.0001" mass="0.005"/>
+        <geom class="visual" size="0.02 0.1" type="cylinder"/>
+      </body>
+    </worldbody>
+  </mujoco>
+  
